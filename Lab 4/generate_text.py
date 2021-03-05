@@ -1,4 +1,5 @@
 import text_stats as ts
+import text_stats_improved as ts_new
 import sys
 import random
 
@@ -10,6 +11,7 @@ def gen_text(text,word,max_length):
     
     counter=0
     db=ts.text_database(text)
+    #db=ts_new.text_database(text)
     
     if word not in db["word"].keys():
         print("Sorry kind Madam/Sir, This word does not appear to be present in the text document you entered")

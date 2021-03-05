@@ -87,18 +87,27 @@ def output_database(text):
             file.write("\n")
         
         file.write("****************\n")
+        file.write("We have first stripped the document for words and then cleaned it as follows \n")
+  
+        
+        file.write("We have converted every word to its uppercase and also removed non-alphabetic characters from each word \n")
+        
+        file.write("We have used dictionaries as these make a lot of sense for a text database,as the keys can be text \n")
+        
         
         file.write("Total number of words the text contains is "+ str(sum(database["word"].values()))+"\n")
         
         file.write("****************\n")
         
-        file.write("We have converted every word to its uppercase and also removed non-alphabetic characters from each word \n")
         
         file.write("Number of Unique words that the text contains is "+str(len(database["word"]))+"\n")
         
         file.write("****************\n")
         
         file.write("The five most frequently occuring words along with the frequency: \n")
+        
+        file.write("For successors, we have just taken the word coming after a given word. Please note that here we have ignored sentence stops and still considered next words\n")
+        
         
         for i in list(database["word"].keys())[0:5]:
             file.write(i+" ("+str(database["word"][i])+" occurences )"+"\n")

@@ -94,8 +94,12 @@ def output_database(text):
             file.write("\n")
         
         file.write("****************\n")
+        file.write("We have first stripped the document for words and then cleaned it as follows \n")
+  
         
         file.write("We have converted every word to its uppercase and also removed non-alphabetic characters from each word \n")
+        
+        file.write("We have used dictionaries as these make a lot of sense for a text database,as the keys can be text \n")
         
         file.write("Total number of words the text contains is "+ str(sum(database["word"].values()))+"\n")
         
