@@ -33,7 +33,7 @@ def gen_text(text,word,max_length):
             
     a=' '.join(word_list)
     print(a)
-    print("Writing all this random text into a Text file\n")
+    print("\n Writing all this random text into a Text file \n")
     with open("generate.txt","w") as f:
         f.write(a)
     
