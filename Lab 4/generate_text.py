@@ -17,11 +17,18 @@ def gen_text(text,word,max_length):
         return 
     word_list=[]
     word_list.append(word)
-    while counter<max_length and len(db["successors"][word])!=0: 
+    while True:
         next_word=random.choices(list(db["successors"][word].keys()),weights=db["successors"][word].values())[0]
         word_list.append(next_word)
         word=next_word
         counter=counter+1
+        if counter>=max_length:
+            print("\n \n Quitting because we have reached our limit \n")
+            break
+        elif len(db["successors"][word])==0:
+            print("\n \n Quitting because the word we reached ends the markovian circuit, as there are no successors \n")
+            break
+            
     a=' '.join(word_list)
     print(a)
     print("Writing all this random text into a Text file\n")
