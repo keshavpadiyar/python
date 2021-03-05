@@ -5,7 +5,7 @@ def filter_words(text):
     words=[word.upper() for word in text.split()]
     for i in range(len(words)): 
         for ch in words[i]:
-            if not(ch.isalpha()) and ch!=".":#Removes non alphabets
+            if not(ch.isalpha()) :#Removes non alphabets
                 words[i] = words[i].replace(ch,"")
             
     return words
@@ -27,10 +27,8 @@ def text_database(text):
     successor_dict={}
     
     for i in range(len(words)):
-        if "." in words[i]:
-            ending_word_flag=1
-            words[i] = words[i].replace(".","")
-         
+    
+            
         word=words[i]
         words_dict=add_value_to_dict(word,words_dict)
         
