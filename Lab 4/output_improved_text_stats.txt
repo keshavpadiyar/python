@@ -1,0 +1,78 @@
+Below, we have printed the information about the database 
+ 
+**********************************************************
+ 
+ 
+Frequency table of alphabetic letters 
+0	('E', 480970)
+1	('T', 354107)
+2	('O', 332717)
+3	('A', 309408)
+4	('I', 268911)
+5	('S', 266424)
+6	('N', 260133)
+7	('H', 255742)
+8	('R', 251863)
+9	('L', 180723)
+10	('D', 158715)
+11	('U', 137354)
+12	('M', 117435)
+13	('Y', 99484)
+14	('W', 96315)
+15	('C', 91697)
+16	('F', 86140)
+17	('G', 72858)
+18	('B', 64067)
+19	('P', 61506)
+20	('V', 40149)
+21	('K', 37823)
+22	('X', 5331)
+23	('J', 4905)
+24	('Q', 3961)
+25	('Z', 1842)
+26	('È', 32)
+27	('Æ', 13)
+28	('À', 1)
+****************
+We have first stripped the document for words and then cleaned it as follows 
+We have converted every word to its uppercase and also removed non-alphabetic characters from each word 
+We have used dictionaries as these make a lot of sense for a text database,as the keys can be text 
+Total number of words the text contains is 960390
+****************
+Number of Unique words that the text contains is 30920
+****************
+The five most frequently occuring words along with the frequency: 
+Now, we shall proceed to name the successor words for all these popular words
+Before we go there let us first explain how we calculate successors!
+We do so by ensuring that words encountered at the end of a sentence or document have NO successors
+Unless of course, these words are encountered elsewhere in the middle of a sentence 
+In the normal case, when the word is in the middle of a sentence, the next word is chosen as a successor
+For details please look into the successor_dict creation in the text_database module 
+THE (30096 occurences )
+--KING, 755
+--WORLD, 442
+--DUKE, 367
+
+AND (28371 occurences )
+--THE, 855
+--I, 792
+--SO, 433
+
+I (21890 occurences )
+--AM, 1958
+--HAVE, 1709
+--WILL, 1624
+
+TO (20895 occurences )
+--THE, 1560
+--BE, 1044
+--ME, 508
+
+OF (18816 occurences )
+--THE, 1622
+--MY, 760
+--HIS, 635
+
+****************
+Thank you! 
+End of Document 
